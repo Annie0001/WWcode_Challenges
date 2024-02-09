@@ -4,7 +4,7 @@
 def find_second_smallest_element(my_list):
     smallest_element = my_list[0]
     for i in range(len(my_list)):
-        if my_list[i] <= my_list[0]:
+        if my_list[i] <= smallest_element:
             smallest_element = my_list[i]
     return smallest_element
 
@@ -25,4 +25,5 @@ def find_second_smallest_element(my_list):
 #     return smallest_element , second_smallest_element
 
 
-print(find_second_smallest_element([10,30,8,13,14,15]))
+#print(find_second_smallest_element([10,30,8,13,14,15]))
+print(find_second_smallest_element([10,2,3,4,9]))
