@@ -15,6 +15,9 @@ class TestStringMethods(unittest.TestCase):
 
     def test_add_two_numbers_false(self):
         self.assertNotEqual(add_two_numbers(2,3), 6)
+    
+    def test_add_two_negative_numbers(self):
+        self.assertEqual(add_two_numbers(-2,-3),-5)
 
 
 
