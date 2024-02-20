@@ -9,6 +9,9 @@
 # check if dictionary is empty then the words are anagram
 
 def anagram_string_check(word_1, word_2):
+    if len(word_1) != len(word_2):
+        print("These two words are not anagram")
+        return
     first_word = word_1.lower()
     second_word = word_2.lower()
     lst_1 = []
@@ -21,7 +24,7 @@ def anagram_string_check(word_1, word_2):
     print(lst_2)
 
     dict_1 = {}
-    dict_2 = {}
+    # dict_2 = {}
     # dict_1 = {
     #    'a' : 2,
     #    'e' : 2,
@@ -38,23 +41,21 @@ def anagram_string_check(word_1, word_2):
             dict_1[lst_1[i]] += 1
     print(dict_1)
 
-    # for i in range(len(lst_2)):
-    #     if lst_2[i] not in dict_2:
-    #         dict_2[lst_2[i]] = 1
-    #     else:
-    #         dict_2[lst_2[i]] += 1
-    # print(dict_2)
-
-    # if dict_1[lst_1[i]] in dict_2:
-    #     count = dict_1[lst_1[i]] - 1
-    #     return count
-    # print(count)
     for i in range(len(lst_2)):
         if lst_2[i] in dict_1:
             dict_1[lst_2[i]] = dict_1[lst_2[i]] - 1
-        # return dict_1[lst_1[i]]
+            if dict_1[lst_2[i]] == 0:
+                dict_1.pop(lst_2[i])
+        else:
+            print ("This words are Not anagram")
+            return
     
-    # print ("This words are anagram")
     print(dict_1)
-print(anagram_string_check("A gentleman","Elegant man"))
-# print(anagram_string_check("gentleman","Elegant man"))
+    if len(dict_1) == 0:
+        print ("This words are anagram")
+    else:
+        print ("This words are Not anagram")
+
+
+# anagram_string_check("A gentleman","Elegant man")
+anagram_string_check("gentleman","Elegant man")
