@@ -1,0 +1,10 @@
+﻿This
+Is
+the 
+first
+Python
+Text 
+File
+To 
+Read  
+first
