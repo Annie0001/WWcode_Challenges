@@ -34,6 +34,8 @@ def check_palindrome(my_string):
     i = 0
     j = len(my_string) -1
 
+    # Moving forward with i 
+    # Moving backwards with j
     while i < j:
         if my_string[i] == my_string[j]:
             i=i+1
