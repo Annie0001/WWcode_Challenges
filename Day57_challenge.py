@@ -13,8 +13,7 @@ def return_key_with_max_value(dict):
         if dict[key] >= max_value:
             max_value = dict[key]
             max_key = key
-        else:
-            print("This is the end")
+            
     return [max_key ,max_value]
 
 
