@@ -5,11 +5,16 @@ class bank_account:
 
     def deposit(self, dep_amount):
         self.balance = self.balance + dep_amount
-    # def withdraw(withdraw_amount):
+
+    def withdraw(self, withdraw_amount):
+        self.balance = self.balance - withdraw_amount
 
     def get_balance(self):
         return self.balance
 
 my_bank_account = bank_account()
 my_bank_account.deposit(10)
+print(my_bank_account.get_balance())
+
+my_bank_account.withdraw(5)
 print(my_bank_account.get_balance())
